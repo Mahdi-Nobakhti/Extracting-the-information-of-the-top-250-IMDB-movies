@@ -2,7 +2,7 @@ import sqlite3
 import requests
 from bs4 import BeautifulSoup
 
-conn = sqlite3.connect("F:\Imdb Movies.db")
+conn = sqlite3.connect("Imdb Movies.db")
 curs = conn.cursor()
 curs.execute("CREATE TABLE  IF NOT EXISTS movies(name string, year int, score real, voters int, genre string, director string, budget string, language string, rank int, country string,currency string)")
 curs.execute("CREATE TABLE  IF NOT EXISTS cooperation(actor string, director string, movie_name string)")
